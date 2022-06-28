@@ -78,7 +78,7 @@ Reproducibility/Repeatability is also crutial when referring to the workflows or
 
 Sometimes the analyst may desire to "force recompute" the workflow, repeat it again to produce hopefully a different, better result. Indeed, such an approach is occasionally useful in real life, it allows to cirumvent computational incidents and various unfavorable situations which lead to a wrong result, but
 
-** since repeatable analysis always produces the same outcome, it makes no sense to force-recompute it. **
+**since repeatable analysis always produces the same outcome, it makes no sense to force-recompute it.**
 
 In fact, if the analysis does not produce the same result, there is a deep problem in the workflow management system. Dealing with this sort of problem should not be left to the users, this issue should be tackled by the developers and prevented from happening in the future.
 
