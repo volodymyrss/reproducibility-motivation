@@ -24,7 +24,7 @@ We can point out the following:
 1. Not every repeatable (and strictly reproducible) analysis is generally reproducible.
 1. Triviarily repeatable analysis may, for example, output verbatim the required result. Clearly, this does not ensure any property of the analysis. Hence requirement of repeatable (or strictly reproducible) analysis is not on it's own useful.
 1. In a very strict sense, no workflow can be reproduced exactly, since every new execution is at new point of time, in a new platform. This is not just of a theoretical concern - issues with computing happen, and data corruption can make any analysis deviate from it's expected outcome, even if it's meant to be deterministic. Provenance tracking ensures that every conrete computation is distingiushed.
-1. Generally reproducible result can be made of non-repeatable workflows, but it is benefitial to make every workflow repeatable and assemble them into a generally reproducible workflow
+1. **Generally reproducible result can be made of non-repeatable workflows, but it is benefitial to make every workflow repeatable and assemble them into a generally reproducible workflow**
 1. Reusability benefits from substantially structuring the analysis, incorporating common analysis workflows.
 1. Reusable (and especially substantially structured) analysis can be easily modified to produce an alternative but compatible workflows.
 1. Hence, reproducibility of the analysis can be faciliated by making the analysis reusable and especially substantially structured.
@@ -59,9 +59,14 @@ It is important that much of these further details do not affect the "scientific
 
 Provenance describes every step that lead to Data production: every one of more Raw Data forms, every workflow as it was applied.
 If the workflows referred in the Provenance are not Repeatable, the same Provenance will be generated for different Data.
-Even though Provenance is the most detailed way to describe Data origin, non-Repeatable workflows make it impossible to use Provenance understand why some data are different from other.
 
-Notably, the detailed Provenance, which is similar to the reified statement before, is not of a direct interest to scientists. Scientists are interested in shortcut, more abstract, low-resolution statements as the "scientific statement" above. It is important to preserve both detailed and (progressively) abstract forms.
+Since Provenance describes every operation on the Data, it is in principle sufficient to repeat the data production, as long as the workflows involved are repeatable.
+
+Even though Provenance is the most detailed way to describe Data origin, non-Repeatable workflows make it impossible to use Provenance to understand why some data are different from other, and reproduce each of the versions.
+
+
+
+*Notably, the detailed Provenance, which is similar to the reified statement before, is not of a direct interest to scientists. Scientists are interested in shortcut, more abstract, low-resolution statements as the "scientific statement" above. It is important to preserve both detailed and (progressively) abstract statements.*
 
 # Communication: Persistence, Permanence, Preservation, Provenance
 
