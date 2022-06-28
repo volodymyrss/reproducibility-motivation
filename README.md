@@ -68,6 +68,8 @@ Even though Provenance is the most detailed way to describe Data origin, non-Rep
 
 *Notably, the detailed Provenance, which is similar to the reified statement before, is not of a direct interest to scientists. Scientists are interested in shortcut, more abstract, low-resolution statements as the "scientific statement" above. It is important to preserve both detailed and (progressively) abstract statements.*
 
+In **ODA**,  we thrive to make every workflow as repeatable as feasible. Every product ODA produces has a reference to workflow computing it, as an URI. Every URI reference to the product can be directly inserted in a publication or a legacy archive, as it is "promised" to be resolvable to the same data.
+
 # Communication: Persistence, Permanence, Preservation, Provenance
 
 Reproducibility/Repeatability is also crutial when referring to the workflows or data. For example, while **saying** that data from time period 2020-2022 was analysed with pipeline based on OSA11.2 we rely on the fact that this pipeline always returns the same result when applied to this time period.
