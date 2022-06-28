@@ -74,6 +74,18 @@ In **ODA**,  we thrive to make every workflow as repeatable as feasible. Every p
 
 Reproducibility/Repeatability is also crutial when referring to the workflows or data. For example, while **saying** that data from time period 2020-2022 was analysed with pipeline based on OSA11.2 we rely on the fact that this pipeline always returns the same result when applied to this time period.
 
+# On "force recompute"
+
+Sometimes the analyst may desire to "force recompute" the workflow, repeat it again to produce hopefully a different, better result. Indeed, such an approach is occasionally useful in real life, it allows to cirumvent computational incidents and various unfavorable situations which lead to a wrong result, but
+
+** since repeatable analysis always produces the same outcome, it makes no sense to force-recompute it. **
+
+In fact, if the analysis does not produce the same result, there is a deep problem in the workflow management system. Dealing with this sort of problem should not be left to the users, this issue should be tackled by the developers and prevented from happening in the future.
+
+There might be cases when "force recompute" seems to make sense. E.g. when a workflow dealing with streaming data, may be producing "currently available list of observations from the archive" which depends on when it is produced. But instead of accepting an irreproducible workflow in the system (with all the issues it brings) this workflow can be made repeatable (insenstivie to the current time, the archive state) by providing state (version) of the archive as an input to the observation selection workflow.
+A difficulty with this approach is that there likely to be many states of the archive which correspond to the same result, and they should not be meaningfully distinguished. This situation can be dealt with the abstraction (de-reification) procedure described above.
+
+
 # DRAFT: Example Implementation in ODA
 
 An analysis can be represented as set of relations. An example of prototype complete cycle is implemented in ODA self-test (introspection) engine.
